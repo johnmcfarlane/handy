@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+NCPUS="1"
+if [ -n `which nproc` ]; then
+    NCPUS=`nproc`
+fi  
+echo $NCPUS
