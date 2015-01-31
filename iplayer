@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+set -o errexit
+
+echo ================================================================================
+echo "$1"
+echo ================================================================================
+
+get_iplayer --nopurge --type=radio --o "/media/stuff/bbc/radio/$1" --get "$1"
+
+export TSOCKS_DEBUG=255
+#export TSOCKS_DEBUG=1
+export LD_PRELOAD=/usr/lib/libtsocks.so.1.8
+
+echo get_iplayer --nopurge --o "/media/stuff/bbc/tv/$1" --get "$1"
+#get_iplayer --nopurge --o "/media/stuff/bbc/tv/$1" --get "$1"
+get_iplayer --nopurge --type=tv --tvmode=flashvhigh,flashhigh,flashnormal,flashhd,flashstd,flashlow --o "/media/stuff/bbc/tv/$1" --get "$1"
+# low,normal,std,high,vhigh,hd
+
+#$*
+
+exit $?

@@ -1,0 +1,2 @@
+#!/bin/bash
+ssh -i /home/pi/.ssh/rpi01_key -D 1080 -M -f pi@rpi001.ddns.net sleep 10000000

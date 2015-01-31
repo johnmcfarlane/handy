@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -o errexit
+echo ================================================================================
+echo $@
+echo ================================================================================
+tsocks_wrapper get_iplayer --type=radio --o /media/stuff/bbc --get \"$@\"
+tsocks_wrapper get_iplayer --type=tv --o /media/stuff/bbc --get \"$@\"
