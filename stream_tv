@@ -4,7 +4,7 @@ rm $fifo
 mkfifo $fifo
 #iplayer --stream --type=livetv "BBC Two" --player="mplayer -cache 512 -"
 #iplayer $1 --type livetv --mode flashstd1,flashstd2,flashhigh1,flashhigh2,flashvhigh1,flashvhigh2 --player mplayer
-iplayer $1 --mode flashstd1,flashstd2,flashhigh1,flashhigh2,flashvhigh1,flashvhigh2 --stream >$fifo &
+iplayer_tv $@ --mode flashstd1,flashstd2,flashhigh1,flashhigh2,flashvhigh1,flashvhigh2 --stream >$fifo &
 omxplayer $fifo
 #mplayer $fifo
 rm $fifo
