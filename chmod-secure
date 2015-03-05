@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-chmod 600 $1
+chmod g-rwx,o-rwx $1
