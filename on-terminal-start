@@ -2,16 +2,15 @@
 #
 # To use this, please add the following line to ~/.bashrc:
 #
-#   source "$HOME"/bin/on-terminal-start.sh
+#   source "$HOME"/bin/on-terminal-start
+#
+# And while you're there, don't forget to uncomment `force_color_prompt=yes`!
 
 # add this folder to the path
 export PATH="$PATH":"$HOME"/bin
 
 # helps make using RSA keys with Git bearable
 eval "$(ssh-agent -s)"
-
-# helpful coloring of terminal text (only suitable for humanoids)
-force_color_prompt=yes
 
 # Git config rigmarole
 git config --global push.default simple
