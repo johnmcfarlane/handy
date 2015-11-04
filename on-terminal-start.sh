@@ -13,3 +13,6 @@ eval "$(ssh-agent -s)"
 # helpful coloring of terminal text (only suitable for humanoids)
 force_color_prompt=yes
 
+# Git config rigmarole
+git config --global push.default simple
+
