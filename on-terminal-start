@@ -15,3 +15,6 @@ eval "$(ssh-agent -s)"
 # Git config rigmarole
 git config --global push.default simple
 
+alias pycharm="~/pycharm/bin/pycharm.sh"
+alias clion="~/clion/bin/clion.sh"
+alias lg="git log --graph --decorate $@"
