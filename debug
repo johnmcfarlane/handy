@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# script that runs a given binary and dumps a backtrace if it returns non-zero
+
+ulimit -c unlimited
+
+export BINARY=$1
+shift
+echo "Debugging: ${BINARY}"
+echo "with parameters: ${@}"
+
+rm core
+$BINARY $@ || gdb $BINARY core -batch -ex bt
