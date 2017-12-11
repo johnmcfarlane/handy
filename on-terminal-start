@@ -16,6 +16,7 @@ eval "$(ssh-agent -s)"
 # Git config rigmarole
 git config --global push.default simple
 git config --global core.excludesfile ~/bin/gitignore
+git config --global merge.ff only
 
 alias pycharm="~/pycharm/bin/pycharm.sh"
 alias clion="~/clion/bin/clion.sh"
