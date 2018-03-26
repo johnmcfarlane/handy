@@ -21,3 +21,8 @@ git config --global merge.ff only
 alias pycharm="~/pycharm/bin/pycharm.sh"
 alias clion="~/clion/bin/clion.sh"
 alias lg="git log --graph --decorate $@"
+alias ll="ls -l $@"
+
+git config --global core.excludesfile "$HOME"/bin/.gitignore
+git config --global user.name "John McFarlane"
+git config --global user.email "github@john.mcfarlane.name"
