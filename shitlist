@@ -1,1 +1,1 @@
-du $1 -ah --max-depth 1 2> /dev/null | sort -hr | less
+du -ah --max-depth 1 $@ 2> /dev/null | sort -hr | less
