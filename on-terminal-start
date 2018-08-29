@@ -25,4 +25,3 @@ alias ll="ls -l $@"
 
 git config --global core.excludesfile "$HOME"/bin/.gitignore
 git config --global user.name "John McFarlane"
-git config --global user.email "github@john.mcfarlane.name"
