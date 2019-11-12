@@ -7,22 +7,17 @@
 # And while you're there, don't forget to uncomment `force_color_prompt=yes`!
 
 # add this folder to the path
-export PATH="$PATH":"$HOME"/bin
 export EDITOR=nano
-
-# helps make using RSA keys with Git bearable
-eval "$(ssh-agent -s)"
-
-# Git config rigmarole
-git config --global push.default simple
-git config --global core.excludesfile ~/bin/gitignore
-git config --global merge.ff only
+export PATH="$PATH":"$HOME"/bin
 
 alias pycharm="~/pycharm/bin/pycharm.sh"
 alias clion="~/clion/bin/clion.sh"
 alias lg="git log --graph --decorate $@"
 alias ll="ls -l $@"
 
-git config --global core.excludesfile "$HOME"/bin/.gitignore
+# Git config rigmarole
+git config --global core.excludesfile "$HOME/bin/gitignore"
+git config --global merge.ff only
+git config --global push.default simple
 git config --global user.email "git@john.mcfarlane.name"
 git config --global user.name "John McFarlane"
