@@ -19,7 +19,7 @@ alias ll="ls -l $@"
 git config --global core.excludesfile "$HOME/bin/gitignore"
 git config --global merge.ff only
 git config --global push.default simple
-git config --global user.email "git@john.mcfarlane.name"
+#git config --global user.email "git@john.mcfarlane.name"
 git config --global user.name "John McFarlane"
 
 # lots more history everywhere
