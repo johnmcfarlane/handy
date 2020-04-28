@@ -1,1 +1,1 @@
-du -ab --max-depth 1 $@ 2> /dev/null | sort -hr | less
+du --all --block-size=1 --human-readable --max-depth 1 $@ 2> /dev/null | sort -hr | less
