@@ -8,7 +8,7 @@
 
 # add this folder to the path
 export EDITOR=nano
-export PATH="$PATH":"$HOME"/bin
+export PATH=/usr/lib/ccache:"$PATH":"$HOME"/bin
 
 alias pycharm="~/pycharm/bin/pycharm.sh"
 alias clion="~/clion/bin/clion.sh"
