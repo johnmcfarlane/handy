@@ -8,7 +8,7 @@
 
 # add this folder to the path
 export EDITOR=nano
-export PATH=/usr/lib/ccache:"$PATH":"$HOME"/bin
+export PATH=/usr/lib/ccache:"$PATH":"$HOME"/.local/bin:"$HOME"/bin
 
 alias pycharm="~/pycharm/bin/pycharm.sh"
 alias clion="~/clion/bin/clion.sh"
@@ -21,6 +21,7 @@ git config --global merge.ff only
 git config --global push.default simple
 #git config --global user.email "git@john.mcfarlane.name"
 git config --global user.name "John McFarlane"
+git config --global credential.helper store
 
 # lots more history everywhere
 export HISTFILESIZE=
