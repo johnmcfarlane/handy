@@ -14,6 +14,7 @@ alias pycharm="~/pycharm/bin/pycharm.sh"
 alias clion="~/clion/bin/clion.sh"
 alias lg="git log --graph --decorate $@"
 alias ll="ls -l $@"
+alias gnome-terminal="dbus-launch gnome-terminal $@"
 
 # Git config rigmarole
 git config --global core.excludesfile "$HOME/bin/gitignore"
