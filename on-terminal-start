@@ -9,6 +9,7 @@
 # add this folder to the path
 export EDITOR=nano
 export PATH=/usr/lib/ccache:"$PATH":"$HOME"/.local/bin:"$HOME"/bin
+export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
 
 alias pycharm="~/pycharm/bin/pycharm.sh"
 alias clion="~/clion/bin/clion.sh"
