@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+PROJECT_DIR="$(pwd)"/gcc
+
+sudo apt-get install flex libgmp-dev libmpfr-dev libmpc-dev
+
+git clone --depth 1 git://gcc.gnu.org/git/gcc.git "${PROJECT_DIR}" || pushd "${PROJECT_DIR}" && git pull --ff-only && popd
+
+mkdir -p ./build/
+cd build
+
+"${PROJECT_DIR}"/configure --disable-bootstrap --disable-multilib --prefix="${HOME}"/gcc/ --enable-languages=c,c++,lto
+make -j "$(nproc)"
+make install
