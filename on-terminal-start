@@ -7,6 +7,7 @@
 # And while you're there, don't forget to uncomment `force_color_prompt=yes`!
 
 # assorted environment variables
+export CONAN_CMAKE_GENERATOR=Ninja
 export EDITOR=nano
 export PATH=/usr/lib/ccache:"$PATH":"$HOME"/.local/bin:"$HOME"/bin
 export DISPLAY=:0
