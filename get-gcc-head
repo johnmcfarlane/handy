@@ -14,3 +14,6 @@ cd build
 "${PROJECT_DIR}"/configure --disable-bootstrap --disable-multilib --prefix="${HOME}"/gcc/ --enable-languages=c,c++,lto
 make -j "$(nproc)"
 make install
+
+sudo update-alternatives --install /usr/bin/g++ g++ "${HOME}"/gcc/bin/g++ 0
+sudo update-alternatives --install /usr/bin/gcc gcc "${HOME}"/gcc/bin/gcc 0

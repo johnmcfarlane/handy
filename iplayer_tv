@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-set -e
-
-#export TSOCKS_DEBUG=255
-export TSOCKS_DEBUG=1
-export LD_PRELOAD=/usr/lib/libtsocks.so.1.8
-
-get_iplayer --nopurge --type=tv --tvmode=flashvhigh,flashhigh,flashnormal,flashhd,flashstd,flashlow --o "/media/stuff/bbc/tv/$1" --get "$@"

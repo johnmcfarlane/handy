@@ -24,11 +24,11 @@ RUN cp /etc/skel/.bashrc ~/ \
 RUN wget --quiet https://github.com/llvm/llvm-project/releases/download/llvmorg-7.1.0/clang+llvm-7.1.0-x86_64-linux-gnu-ubuntu-14.04.tar.xz \
   && tar xf clang+llvm-7.1.0-x86_64-linux-gnu-ubuntu-14.04.tar.xz
 
-# install johnmcfarlane/bin
+# install johnmcfarlane/handy
 RUN cd ~ \
-  && git clone https://github.com/johnmcfarlane/bin.git \
+  && git clone https://github.com/johnmcfarlane/handy.git \
   && sed -i "s/#force_color_prompt=yes/force_color_prompt=yes/g" ~/.bashrc \
-  && echo 'source "$HOME"/bin/on-terminal-start' >> ~/.bashrc
+  && echo 'source "$HOME"/handy/on-terminal-start' >> ~/.bashrc
 
 RUN update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-3.8 10 \
   && update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-3.9 10 \

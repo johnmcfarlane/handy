@@ -1,15 +1,11 @@
 # The common additional terminal start-up commands of johnmcfarlane.
-#
-# To use this, please add the following line to ~/.bashrc:
-#
-#   source "$HOME"/bin/on-terminal-start
-#
-# And while you're there, don't forget to uncomment `force_color_prompt=yes`!
+
+LOCAL=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 # assorted environment variables
 export CONAN_CMAKE_GENERATOR=Ninja
 export EDITOR=nano
-export PATH=/usr/lib/ccache:"$PATH":"$HOME"/.local/bin:"$HOME"/bin
+export PATH=/usr/lib/ccache:"$PATH":"$HOME"/.local/bin:"$HOME"/bin:"$LOCAL"
 export DISPLAY=:0
 export LIBGL_ALWAYS_INDIRECT=1
 
@@ -17,13 +13,11 @@ export LIBGL_ALWAYS_INDIRECT=1
 #export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
 #export LIBGL_ALWAYS_INDIRECT=1
 
-alias pycharm="~/pycharm/bin/pycharm.sh"
-alias clion="~/clion/bin/clion.sh"
 alias lg="git log --graph --decorate $@"
 alias ll="ls -l $@"
 
 # Git config rigmarole
-git config --global core.excludesfile "$HOME/bin/gitignore"
+git config --global core.excludesfile "$HOME/handy/gitignore"
 git config --global init.defaultBranch main
 git config --global merge.ff only
 git config --global push.default simple

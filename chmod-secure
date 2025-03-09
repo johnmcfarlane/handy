@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-chmod g-rwx,o-rwx $1

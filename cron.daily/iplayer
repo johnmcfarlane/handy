@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-set -o errexit
-sudo -u pi /home/pi/bin/grab
