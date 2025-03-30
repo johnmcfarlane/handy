@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+set -euox pipefail
+
+PROJECT_NAME=llvm-project
+PROJECT_DIR="$(pwd)"/"$PROJECT_NAME"
+
+git clone https://github.com/llvm/llvm-project.git "${PROJECT_DIR}" || true
+
+mkdir -p ./build/
+cd build
+
+CC=clang
+CXX=clang++
+cmake \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX="$HOME"/llvm \
+    -DLLVM_CCACHE_BUILD=On \
+    -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;compiler-rt;libc;lld" \
+    -DLLVM_ENABLE_RUNTIMES="libcxx;libcxxabi;libunwind" \
+    -G Ninja \
+    ${PROJECT_DIR}/llvm
+
+ninja install
+
+sudo update-alternatives --install /usr/bin/clang++ clang++ "${HOME}"/llvm/bin/clang++ 0
+sudo update-alternatives --install /usr/bin/clang clang "${HOME}"/llvm/bin/clang 0

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -euox pipefail
+
+sudo apt install shellcheck
+
+find . -type f -executable -exec shellcheck {} \+
