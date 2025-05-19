@@ -24,6 +24,7 @@ git config --global push.default simple
 git config --global user.email "git@john.mcfarlane.name"
 git config --global user.name "John McFarlane"
 git config --global credential.helper store
+git config --global push.autoSetupRemote true
 
 # lots more history everywhere
 export HISTFILESIZE=
